@@ -16,40 +16,30 @@ export default function App() {
 
   return (
     <View style={styles.container}>
-      {/* <ScrollView>
-        {people.map((p) => {
-          return (
-            <View key={p.key}>
-              <Text style={styles.item}>{p.name}</Text>
-            </View>
-          );
-        })}
-      </ScrollView> */}
-
       <FlatList
-      numColumns={2}
-      keyExtractor={(item)=>item.id}
+        numColumns={2}
+        keyExtractor={(item) => item.id}
         data={people}
         renderItem={({ item }) => <Text style={styles.item}>{item.name}</Text>}
       />
     </View>
   );
 }
-//df
+
 const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: "black",
     paddingTop: 40,
     paddingHorizontal: 20,
-    // alignItems: "center",
-    // justifyContent: "center",
   },
   item: {
     marginTop: 24,
     padding: 30,
     borderColor: "#222",
     borderWidth: 2,
-    color: "white",marginHorizontal:10,marginTop:24
+    color: "white",
+    marginHorizontal: 10,
+    marginTop: 24,
   },
 });
